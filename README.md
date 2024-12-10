@@ -8,6 +8,8 @@ cornerPrincipal = Instance.new("UICorner")
 botaoAbrir = Instance.new("TextButton")
 cornerSecundaria = Instance.new("UICorner")
 HiVNIsHere = Instance.new("TextLabel")
+VersionVN = Instance.new("TextLabel")
+Welcome = Instance.new("TextLabel")
 
 wait(0.1)
 --Frame
@@ -35,6 +37,25 @@ HiVNIsHere.BackgroundTransparency = 1
 HiVNIsHere.TextColor3 = Color3.fromRGB(255, 255, 255)
 HiVNIsHere.Size = UDim2.new(0, 1000,0, 70)
 HiVNIsHere.Position = UDim2.new(0, 400,0, 0)
+--VN Version
+VersionVN.Parent = framePrincipal
+VersionVN.Name = "VNVersion"
+VersionVN.Text = "Version 0.1"
+VersionVN.TextScaled = true
+VersionVN.Font = Enum.Font.FredokaOne
+VersionVN.BackgroundTransparency = 1
+VersionVN.TextColor3 = Color3.fromRGB(255, 255, 255)
+VersionVN.Size = UDim2.new(0, 1000,0, 70)
+VersionVN.Position = UDim2.new(0, 400,0, 100)
+--Welcome
+Welcome.Parent = framePrincipal
+Welcome.Name = "Welcome"
+Welcome.Text = "山乇ㄥ匚ㄖ爪乇"
+Welcome.TextScaled = true
+Welcome.BackgroundTransparency = 1
+Welcome.TextColor3 = Color3.fromRGB(255, 255, 255)
+Welcome.Size = UDim2.new(0, 1000,0, 70)
+Welcome.Position = UDim2.new(0, 400,0, 200)
 wait(1)
 gui.Parent = game.Players.LocalPlayer.PlayerGui
 gui.Name = "VN HUB"
