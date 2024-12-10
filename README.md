@@ -19,6 +19,9 @@ tamanhoGigante = Instance.new("NumberValue")
 velocidadeButton = Instance.new("TextButton")
 definirVelocidade = Instance.new("TextBox")
 velocidadeValue = Instance.new("NumberValue")
+puloButton = Instance.new("TextButton")
+definirPulo = Instance.new("TextBox")
+puloValue = Instance.new("NumberValue")
 wait(0.1)
 --Frame
 framePrincipal.Size = UDim2.new(0.95, 0, 0.95, 0)
@@ -172,6 +175,27 @@ definirVelocidade.TextScaled = true
 definirVelocidade.Parent = frameGeral
 definirVelocidade.Font = Enum.Font.Arcade
 definirVelocidade.Size = UDim2.new(0.094, 0,0.141, 0)
+--Mudar pulo button
+puloButton.Name = "Mudar o pulo"
+puloButton.Size = UDim2.new(0.375, 0,0.141, 0)
+puloButton.Text = "Mude seu pulo"
+puloButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+puloButton.BackgroundTransparency = 1
+puloButton.Position = UDim2.new(0.281, 0, 0.30, 0)
+puloButton.TextScaled = true
+puloButton.Parent = frameGeral
+puloButton.Visible = true
+puloButton.Font = Enum.Font.Arcade
+--Pulo
+definirPulo.Name = "Pulo"
+definirPulo.Text = "Digite aqui o pulo"
+definirPulo.TextColor3 = Color3.fromRGB(255, 255, 255)
+definirPulo.BackgroundTransparency = 1
+definirPulo.Position = UDim2.new(0.7, 0, 0.30, 0)
+definirPulo.TextScaled = true
+definirPulo.Parent = frameGeral
+definirPulo.Font = Enum.Font.Arcade
+definirPulo.Size = UDim2.new(0.094, 0,0.141, 0)
 
 wait(0.01)
 gui.Parent = game.Players.LocalPlayer.PlayerGui
@@ -214,4 +238,9 @@ velocidadeButton.MouseButton1Click:Connect(function()
 	velocidadeValue.Value = definirVelocidade.Text
 	wait(0.001)
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = velocidadeValue.Value
+end)
+puloButton.MouseButton1Click:Connect(function()
+	puloValue.Value = definirPulo.Text
+	wait(0.001)
+	game.Players.LocalPlayer.Character.Humanoid.JumpHeight = puloValue.Value
 end)
